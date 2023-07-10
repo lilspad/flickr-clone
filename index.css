@@ -24,18 +24,19 @@ main::before, main::after {
     position: absolute;
     width: 300px;
     left: calc(50% - 150px);
+    cursor: pointer;
 }
 
 main::before {
     content: "Starry Night in the Red Valley";
     animation: changeTitle ease-in-out 30s infinite;
-    bottom: 50px;
+    bottom: 90px;
 }
 
 main::after {
     content: "by Mengzhonghua";
     animation: changeAuthor ease-in-out 30s infinite;
-    bottom: 30px;
+    bottom: 70px;
 }
 
 @keyframes changeBackground {
@@ -98,12 +99,13 @@ main::after {
     }
 }
 
-button {
+.button {
     padding: 5px 10px;
     text-align: center;
+    min-width: 100px;
 }
 
-button.white {
+.button.white {
     background-color: white;
     color: black;
     font-weight: 600;
@@ -114,11 +116,26 @@ header {
     position: absolute;
     top: 0;
     height: 64px;
-    width: 100%;
+    width: calc(100% - 48px);
     background-color: rgba(0, 0, 0, 0.506);
+    padding: 0px 24px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     font-size: 16px;
+}
+
+.search {
+    background-color: rgba(255, 255, 255, 0.909);
+    padding: 6px 0px 6px 10px;
+    width: 100%;
+    margin: 0 100px;
+    font-size: 14px;
+    color:rgba(0, 0, 0, 0.506)
+}
+
+.search i {
+    padding: 2px 10px 2px 2px;
 }
 
 h2 {
@@ -137,7 +154,7 @@ h2 .pink {
 main {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: calc(100% - 48px);
     width: 60%;
     margin: auto;
     align-items: center;
@@ -156,7 +173,7 @@ h3 {
     margin: 20px 0px 50px 0px;
 }
 
-main button {
+main .button {
     font-size: 24px;
     height: 64px;
     padding: 0px 20px;
@@ -164,4 +181,30 @@ main button {
 
 footer {
     background-color: black;
+    width: 100vw;
+    padding: 16px 0;
+}
+
+footer nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer a, footer p, footer i {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}   
+
+footer p {
+    overflow: hidden;
+    max-width: 15%;
+    max-height: 20px;
+}
+
+.lang {
+    margin-left: 8px;
+    
 }
