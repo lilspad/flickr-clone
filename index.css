@@ -19,7 +19,7 @@ body {
 
 main::before, main::after {
     text-align: center;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 600;
     position: absolute;
     width: 300px;
@@ -99,8 +99,15 @@ main::after {
 }
 
 button {
-    padding: 5px;
-    border: 2px solid white;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+button.white {
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    border-radius: 3px;
 }
 
 header {
@@ -111,4 +118,50 @@ header {
     background-color: rgba(0, 0, 0, 0.506);
     display: flex;
     justify-content: space-between;
+    font-size: 16px;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+h2 .blue {
+    color:cornflowerblue
+}
+
+h2 .pink {
+    color: deeppink;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+h1 {
+    font-size: 56px;
+    margin: 5px;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 400;
+    margin: 20px 0px 50px 0px;
+}
+
+main button {
+    font-size: 24px;
+    height: 64px;
+    padding: 0px 20px;
+}
+
+footer {
+    background-color: black;
 }
