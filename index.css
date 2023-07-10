@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    background: none;
+    color: white;
+    font-family: Proxima Nova, helvetica neue, helvetica, arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("https://live.staticflickr.com/65535/53032767650_1c0999034c_b.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: changeBackground ease-in-out 30s infinite;
+}
+
+main::before, main::after {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    position: absolute;
+    width: 300px;
+    left: calc(50% - 150px);
+}
+
+main::before {
+    content: "Starry Night in the Red Valley";
+    animation: changeTitle ease-in-out 30s infinite;
+    bottom: 50px;
+}
+
+main::after {
+    content: "by Mengzhonghua";
+    animation: changeAuthor ease-in-out 30s infinite;
+    bottom: 30px;
+}
+
+@keyframes changeBackground {
+    0%, 100% {
+        background-image: url("https://live.staticflickr.com/65535/53032767650_1c0999034c_b.jpg");
+    }
+    20% {
+        background-image: url("https://live.staticflickr.com/65535/53033018344_bf6ef7e1b6_o.jpg");
+    }
+    40% {
+        background-image: url("https://live.staticflickr.com/65535/53031159865_8b6abea9c6_b.jpg");
+    }
+    60% {
+        background-image: url("https://live.staticflickr.com/65535/53032543487_d1e24c0173_b.jpg");
+    }
+    80% {
+        background-image: url("https://live.staticflickr.com/65535/53033059399_b3b2cc0f86_b.jpg");
+    }
+}
+
+@keyframes changeTitle {
+    0%, 100% {
+        content: "Starry Night in the Red Valley";
+    }
+    20% {
+        content: "White Foam (EXPLORED)"
+    }
+    40% {
+        content: "Inspiration"
+    }
+    60% {
+        content: "Baumbrücke im mystischen Wald"
+    }
+    80% {
+        content: "So Speaks the Sea"
+    }
+}
+
+@keyframes changeAuthor {
+
+    0%,
+    100% {
+        content: "by Mengzhonghua";
+    }
+
+    20% {
+        content: "by Chung Hu"
+    }
+
+    40% {
+        content: "by Ian Haycox"
+    }
+
+    60% {
+        content: "by Michael Januschkowetz"
+    }
+
+    80% {
+        content: "by Sarag Shepherd"
+    }
+}
+
+button {
+    padding: 5px;
+    border: 2px solid white;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    height: 64px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.506);
+    display: flex;
+    justify-content: space-between;
+}
